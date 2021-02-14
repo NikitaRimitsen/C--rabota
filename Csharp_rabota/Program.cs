@@ -52,7 +52,7 @@ namespace Csharp_rabota
             //int num = rnd.Next(1, 8);//num-название переменной; Next-свойство
 
             string fio = "";
-            int gruppa = 0;
+            string gruppa = "";
             int nomer = 0;
             int vozrast = 0;
             string pol = "";
@@ -62,7 +62,7 @@ namespace Csharp_rabota
             Console.WriteLine("FIO");
             fio = Console.ReadLine();
             Console.Write("Gruppa-");
-            gruppa = Convert.ToInt32(Console.ReadLine());
+            gruppa = Console.ReadLine();
             Console.Write("Nomer Varianta-");
             nomer = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Vozrast-");
@@ -78,7 +78,7 @@ namespace Csharp_rabota
             
             //Console.WriteLine(nimetus);//Console.WriteLine-выводит информацию на экран; nimetus-переменная
             StreamWriter filesse1 = new StreamWriter(@"..\..\Dannie.txt", true);//filesse-переменная;..\..\-выйдет из двух папок; true-будет добавлять (новые файлы);если по русски - то надо писать (encoding-8-utf)
-            filesse1.WriteLine("FIO-{0}, Gruppa {1}, Nomer {2}, Vozrast {3}, pol {4}, nomer lab{5}, nazvanie {6}", fio, gruppa.ToString(), nomer.ToString(), vozrast.ToString(), pol, nomer_lab.ToString(), nazvanie);//место {0} поставит в num, место {1} поставит в nimetus
+            filesse1.WriteLine("FIO-{0}, Gruppa {1}, Nomer {2}, Vozrast-{3}, pol {4}, nomer lab-{5}, nazvanie {6}", fio, gruppa.ToString(), nomer.ToString(), vozrast.ToString(), pol, nomer_lab.ToString(), nazvanie);//место {0} поставит в num, место {1} поставит в nimetus
             filesse1.Close();//закрывает файл
             //int num = rnd.Next(1, 8);//num-название переменной; Next-свойство 
         }
